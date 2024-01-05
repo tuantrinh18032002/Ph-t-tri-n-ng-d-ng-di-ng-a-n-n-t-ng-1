@@ -29,18 +29,24 @@ class InfoDetailsScreen extends StatelessWidget {
           ElevatedButton(
             onPressed: () {
                // Chuyển đến trang thanh toán khi nút "Mua ngay" được nhấn
-    Navigator.of(context).push(MaterialPageRoute<void>(
-      builder: (BuildContext context) => const CheckoutScreen(),
-    ));
+               Navigator.of(context).push(MaterialPageRoute<void>(
+                 builder: (BuildContext context) => const CheckoutScreen(),
+               ));
             },
             child: Text('Mua ngay'),
           ),
           const SizedBox(height: 10.0),
-          TextButton(
+          ElevatedButton(
             onPressed: () {
-        
+              // Xử lý sự kiện khi nút "Thêm vào giỏ hàng" được nhấn
+              // Ví dụ: Hiển thị thông báo xác nhận, thêm sản phẩm vào giỏ hàng, vv.
+              ScaffoldMessenger.of(context).showSnackBar(
+                SnackBar(
+                  content: Text('Đã thêm vào giỏ hàng!'),
+                ),
+              );
             },
-            child: Text('Them vao gio hang'),
+            child: Text('Thêm vào giỏ hàng'),
           ),
         ],
       ),

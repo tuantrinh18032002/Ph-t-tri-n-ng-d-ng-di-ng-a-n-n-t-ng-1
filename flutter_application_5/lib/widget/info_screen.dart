@@ -11,7 +11,7 @@ class InfoScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Product Information')),
+      appBar: AppBar(title: const Text('Ứng dụng Flutter')),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
@@ -23,11 +23,11 @@ class InfoScreen extends StatelessWidget {
             ),
             onTap: () => _gotoDetailsPage(context),
             title: const Text(
-              'Nhấn vào biểu tượng để xem chuyển tiếp .',
+              'Chuyển đến trang thanh toán .',
             ),
           ),
           InfoTile(title: 'San Pham', content: 'Flutter Product'),
-          InfoTile(title: 'Mieu ta', content: 'A sample Flutter product.'),
+          InfoTile(title: 'Mieu ta', content: 'Flutter là một SDK phát triển ứng dụng di động nguồn mở được tạo ra bởi Google. Nó được sử dụng để phát triển ứng dụng cho Android và iOS, cũng là phương thức chính để tạo ứng dụng cho Google Fuchsia. Flutter được phát triển nhằm giải quyết bài toán thường gặp trong mobile là Fast Development và Native Performance.'),
           InfoTile(title: 'Gia', content: '\$19.99'),
         ],
       ),
@@ -36,7 +36,7 @@ class InfoScreen extends StatelessWidget {
 
   void _gotoDetailsPage(BuildContext context) {
     Navigator.of(context).push(MaterialPageRoute<void>(
-      builder: (BuildContext context) => const InfoDetailsScreen(productDetails: 'chon dich vu ban muon',),
+      builder: (BuildContext context) => const InfoDetailsScreen(productDetails: 'Flutter',),
     ));
   }
 }
